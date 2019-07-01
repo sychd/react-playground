@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./assets/styles/main.scss";
-import { ClickCounter } from "./counter/click-counter/click-counter";
+import { TopNavigation } from "./top-navigation/top-navigation";
 
 function AppComponent() {
   return (
     <div>
-      <ClickCounter count={100} />
+      <TopNavigation />
     </div>
   );
 }

@@ -1,23 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import "./click-counter.scss";
 
-export function ClickCounter(props) {
-    const [count, setCount] = useState(props.count || 0);
-
-
-    useEffect(() => {
-        console.log('Render has been occured');
-    });
-
-    useEffect(() => {
-        console.log('Count has been changed');
-    }, [count]);
-
+export function ClickCounter({incCounter, decCounter, counter}) {
     return (
-        <div class="click-counter">
-            <button class="click-counter__control" onClick={() => setCount(count - 1)}>-</button>
-                <div class="click-counter__result">{count}</div>
-            <button class="click-counter__control" onClick={() => setCount(count + 1)}>+</button>
+        <div className="click-counter">
+            <button className="click-counter__control" onClick={decCounter}>-</button>
+                <div className="click-counter__result">{counter}</div>
+            <button className="click-counter__control" onClick={incCounter}>+</button>
         </div>
     );
 }

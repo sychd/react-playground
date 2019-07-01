@@ -1,0 +1,22 @@
+@import "src/assets/styles/variables.scss";
+
+.top-navigation {
+    &__separator {
+        margin: $space-md 0;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        list-style: none;
+        display: block;
+        border-right: 1px solid rgba($color: #000000, $alpha: .4);
+        padding: 0 $space-md;
+    }
+
+    &__item:last-of-type {
+        border-right: none;
+    }
+}
