@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import "./click-counter.scss";
 
 export function ClickCounter({incCounter, decCounter, counter}) {

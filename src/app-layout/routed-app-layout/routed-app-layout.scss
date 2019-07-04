@@ -1,0 +1,7 @@
+@import "src/assets/styles/variables.scss";
+
+.app-layout {
+    &__separator {
+        margin: $space-md 0;
+    }
+}

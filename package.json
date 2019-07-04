@@ -22,6 +22,7 @@
   },
   "alias": {
     "~counter": "./src/counter/*",
+    "~about": "./src/about/*",
     "~styles": "./assets/styles/*"
   }
 }

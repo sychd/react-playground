@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./assets/styles/main.scss";
-import { TopNavigation } from "./top-navigation/top-navigation";
+import { RoutedAppLayout } from "./app-layout/routed-app-layout/routed-app-layout";
 
 function AppComponent() {
   return (
-    <div>
-      <TopNavigation />
-    </div>
+      <RoutedAppLayout />
   );
 }
 

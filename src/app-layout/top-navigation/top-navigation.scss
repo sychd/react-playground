@@ -1,10 +1,6 @@
 @import "src/assets/styles/variables.scss";
 
 .top-navigation {
-    &__separator {
-        margin: $space-md 0;
-    }
-
     &__list {
         display: flex;
     }
