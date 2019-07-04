@@ -5,7 +5,7 @@ export function AboutPage() {
         <div style={{ textAlign: 'center' }}>
             <h2>About page</h2>
             <br />
-            <h4>This is test my app to get acquainted with react :)</h4>
+            <h4>This is test app to get acquainted with react :)</h4>
         </div>
     );
 }

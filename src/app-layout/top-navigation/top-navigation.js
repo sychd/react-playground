@@ -16,7 +16,7 @@ export function TopNavigation() {
         <nav className="top-navigation">
             <ul className="top-navigation__list">
                 {links.map(({ path, title }) =>
-                    <li className="top-navigation__item">
+                    <li className="top-navigation__item" key={title}>
                         <Link to={path}>{title}</Link>
                     </li>
                 )}
