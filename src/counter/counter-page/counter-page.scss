@@ -1,10 +1,8 @@
 @import "src/assets/styles/variables.scss";
+@import "src/assets/styles/mixins.scss";
 
 .counter-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include feature-page-layout;
 
     .click-counter {
         margin: 50px;

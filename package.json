@@ -23,6 +23,7 @@
   "alias": {
     "~counter": "./src/counter/*",
     "~about": "./src/about/*",
+    "~music-player": "./src/music-player/*",
     "~styles": "./assets/styles/*"
   }
 }
