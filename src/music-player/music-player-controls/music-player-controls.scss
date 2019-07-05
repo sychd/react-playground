@@ -1,0 +1,10 @@
+@import "src/assets/styles/mixins.scss";
+@import "src/assets/styles/variables.scss";
+
+.music-player-controls {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $space-md;
+}
