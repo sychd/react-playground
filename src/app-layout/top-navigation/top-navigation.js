@@ -9,7 +9,7 @@ export function TopNavigation() {
     const links = [
         { path: "/counter/", title: "Counter" },
         { path: "/about/", title: "About" },
-        { path: "/music-player/", title: "Music player" }
+        { path: "/player/", title: "Music player" }
     ];
 
     return (

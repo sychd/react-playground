@@ -1,7 +1,7 @@
 @import "src/assets/styles/mixins.scss";
 @import "src/assets/styles/variables.scss";
 
-.music-player-page {
+.player-page {
     @include feature-page-layout;
 
     &__content {

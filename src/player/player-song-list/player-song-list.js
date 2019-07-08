@@ -1,8 +1,8 @@
 import React from 'react';
-import "./music-player-song-list.scss";
+import "./player-song-list.scss";
 
 
-export class MusicPlayerSongList extends React.Component {
+export class PlayerSongList extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -11,7 +11,7 @@ export class MusicPlayerSongList extends React.Component {
         let songs = this.props.songs || [];
 
         return (
-            <div className="music-player-song-list">
+            <div className="player-song-list">
                 {songs.length ? "" : <span>No songs available.</span>}
                 {songs.map(song => <div key={song}>{song}</div>)}
             </div>
