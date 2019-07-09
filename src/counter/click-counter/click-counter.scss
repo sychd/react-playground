@@ -17,10 +17,6 @@
         transform: rotate(360deg) scale(1.5);
     }
 
-    &__control:focus{
-        outline: 0;
-    }
-
     &__result {
         font-weight: $font-bold;
     }

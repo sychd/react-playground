@@ -1,3 +1,5 @@
+@import "src/assets/styles/variables.scss";
+
 *,
 *::after
 ,*::before {
@@ -7,7 +9,9 @@
 } 
 html {
     font-size: 62.5%;
+    font-family: Helvetica, sans-serif;
 } 
+
 body {
     background-color: #ecf0f1;
     color: #0f0e0f;
@@ -15,9 +19,35 @@ body {
     font-size: 16px;
     line-height: 1.7rem;
     padding: 3rem;
+    box-sizing: content-box;
 }
 h1 {
     text-align: center;
     margin-top: 5rem;
     font-size: 6rem;
+}
+
+button {
+    border-radius: $border-radius-md;
+    min-width: $elem-height-md;
+    height: $elem-height-md; 
+    padding: $space-xs;
+    background-color: $gray;
+    color: $black;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    border: none;
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+        background-color: $dark-gray;
+    }
+    &:active {
+        opacity: 0.8;
+        transform: scale(0.8);
+    }
+    
+    &:focus{
+        outline: 0;
+    }
 }
