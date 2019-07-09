@@ -1,0 +1,7 @@
+export const GP_PLAYER_ACTIONS = {
+    SWITCH_PLAY: '[Player] GP_SWITCH_PLAY',
+    PREVIOUS: '[Player] GP_PREVIOUS',
+    NEXT: '[Player] GP_NEXT',
+    VOLUME_CHANGE: '[Player] GP_VOLUME_CHANGE',
+    VOLUME_CHANGE_SUCCESS: '[Player] GP_VOLUME_CHANGE_SUCCESS'
+};

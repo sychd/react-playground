@@ -2,11 +2,15 @@ import React from 'react';
 import "./player-page.scss";
 import { PlayerControls } from '../player-controls/player-controls';
 import { PlayerSongList } from '../player-song-list/player-song-list';
-
+import { GP_PLAYER_ACTIONS } from '../+store/player-actions';
 
 export class PlayerPage extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        const { onPlayPauseClick, onNextClick, onPreviousClick, onVolumeInput, volume } = props;
+        Object.assign(this, { onPlayPauseClick, onNextClick, onPreviousClick, onVolumeInput });
+        console.log('xx', volume);
+        this.ACTIONS = GP_PLAYER_ACTIONS;
     }
 
     render() {
@@ -14,7 +18,13 @@ export class PlayerPage extends React.Component {
             <div className="player-page">
                 <h2 className="player-page__header">Player Page</h2>
                 <div className="player-page__content">
-                    <PlayerControls></PlayerControls>
+                    <PlayerControls
+                        onPlayPauseClick={() => 1}
+                        onNextClick={() => 1}
+                        onPreviousClick={() => 1}
+                        volume={this.props.volume}
+                        onVolumeInput={this.onVolumeInput}
+                    ></PlayerControls>
                     <PlayerSongList></PlayerSongList>
                 </div>
             </div>
