@@ -1,5 +1,5 @@
-import { ClickCounter } from '~counter/click-counter/click-counter';
-import React, { useState, useEffect } from 'react';
+import {ClickCounter} from "~counter/click-counter/click-counter";
+import React, {useEffect, useState} from "react";
 import "./counter-page.scss";
 
 const initialCounter = Math.ceil(Math.random() * 100);
@@ -10,10 +10,10 @@ export function CounterPage() {
     let incCounter = () => setCounter(counter + 1);
     let decCounter = () => setCounter(counter - 1);
     let resetCounter = () => setCounter(0);
- 
+
     useEffect(() => {
-        console.log('Render has been occured');
-    }); 
+        console.log('Render has been occurred');
+    });
 
     useEffect(() => {
         console.log('Count has been changed', counter);
@@ -23,9 +23,9 @@ export function CounterPage() {
         <div className="counter-page">
             <h2 className="counter-page__header">Counter page</h2>
             <ClickCounter className="click-counter"
-                incCounter={incCounter}
-                decCounter={decCounter}
-                counter={counter} />
+                          incCounter={incCounter}
+                          decCounter={decCounter}
+                          counter={counter}/>
             <button className="counter-page__reset-btn" onClick={resetCounter}>Reset counter</button>
         </div>
     );

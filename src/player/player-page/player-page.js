@@ -6,8 +6,9 @@ import { PlayerSongList } from '../player-song-list/player-song-list';
 export class PlayerPage extends React.Component {
     constructor(props) {
         super(props);
-        const { onPlayPauseClick, onNextClick, onPreviousClick, onVolumeInput, volume } = props;
-        Object.assign(this, { onPlayPauseClick, onNextClick, onPreviousClick, onVolumeInput });
+        this.props.initializePlayerModule();// bug - not set on first render
+        const { onPlayPauseClick, onNextClick, onPreviousClick, onVolumeChange} = props;
+        Object.assign(this, { onPlayPauseClick, onNextClick, onPreviousClick, onVolumeChange });
     }
 
     render() {
@@ -16,11 +17,12 @@ export class PlayerPage extends React.Component {
                 <h2 className="player-page__header">Player Page</h2>
                 <div className="player-page__content">
                     <PlayerControls
-                        onPlayPauseClick={() => 1}
-                        onNextClick={() => 1}
-                        onPreviousClick={() => 1}
+                        isPaused={this.props.isPaused}
+                        onPlayPauseClick={this.onPlayPauseClick}
+                        onNextClick={this.onNextClick}
+                        onPreviousClick={this.onPreviousClick}
                         volume={this.props.volume}
-                        onVolumeInput={this.onVolumeInput}
+                        onVolumeChange={this.onVolumeChange}
                     ></PlayerControls>
                     <PlayerSongList></PlayerSongList>
                 </div>

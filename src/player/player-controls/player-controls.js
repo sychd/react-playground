@@ -6,13 +6,10 @@ import {Range} from "~shared/components/range/range";
 export class PlayerControls extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isPlaying: props.isPlaying
-        };
     }
 
     getPlayPauseLabel() {
-        return this.state.isPlaying ? '||' : '►';
+        return this.props.isPaused ? '►' : '||';
     }
 
     render() {
@@ -32,13 +29,8 @@ export class PlayerControls extends React.Component {
                 <label htmlFor="volume" className="player-controls__label">Volume</label>
                 <Range className="player-controls__range-ctrl" id="volume"
                     value={this.props.volume}
-                    onValueChange={this.props.onVolumeInput}
+                   onValueChange={this.props.onVolumeChange}
                 />
-                {/* <label htmlFor="play-song">Play song:</label>
-                <div>
-                    <input id="play-song" type="text"></input>
-                    <button type="button">Ok</button>
-                </div> */}
             </div>
         );
     }

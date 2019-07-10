@@ -1,0 +1,2 @@
+- add TS
+- fix bug moduleInitialize first render

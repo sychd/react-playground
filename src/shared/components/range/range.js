@@ -3,17 +3,17 @@ import "./range.scss";
 
 export function Range(props) {
     const [value, setValue] = useState(props.value || 0);
-    const [isVolumeCtrlPressed, setIsVolumeCtrlPressed] = useState(false);
+    const [isCtrlPressed, setIsCtrlPressed] = useState(false);
 
-    const setPressedOnVolumeCtrl = isVolumeCtrlPressed => (event) => {
-        setIsVolumeCtrlPressed(isVolumeCtrlPressed);
-        valueChangeHandler(isVolumeCtrlPressed, event);
+    const setPressedOnVolumeCtrl = isCtrlPressed => (event) => {
+        setIsCtrlPressed(isCtrlPressed);
+        valueChangeHandler(isCtrlPressed, event);
     };
 
-    const valueChangeHandler = (isVolumeCtrlPressed, event) => {
+    const valueChangeHandler = (isCtrlPressed, event) => {
         setValue(event.target.value);
-        if (!isVolumeCtrlPressed) {
-            props.onValueChange(value);
+        if (!isCtrlPressed) {
+            props.onValueChange(+value);
         }
     };
 
@@ -21,7 +21,7 @@ export function Range(props) {
         <input id={props.id} type="range" step="5" className="range"
                onMouseDown={setPressedOnVolumeCtrl(true)}
                onMouseUp={setPressedOnVolumeCtrl(false)}
-               onChange={valueChangeHandler.bind(this, isVolumeCtrlPressed)}
+               onChange={valueChangeHandler.bind(this, isCtrlPressed)}
                value={value}/>
     );
 }
