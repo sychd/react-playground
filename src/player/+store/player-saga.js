@@ -1,5 +1,5 @@
 import { GP_PLAYER_ACTIONS } from "./player-actions";
-import { takeLatest, takeEvery, put } from "redux-saga/effects";
+import { takeLatest, put } from "redux-saga/effects";
 import "babel-polyfill";
 
 const actions = GP_PLAYER_ACTIONS;
@@ -11,5 +11,4 @@ function* handleVolumeChange() {
 
 export function* playerSaga() {
     yield takeLatest(actions.VOLUME_CHANGE, handleVolumeChange);
-    console.log("Player saga init");
 }

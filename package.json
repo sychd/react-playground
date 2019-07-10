@@ -29,6 +29,7 @@
     "~counter": "./src/counter/*",
     "~about": "./src/about/*",
     "~player": "./src/player/*",
+    "~shared": "./src/shared/*",
     "~styles": "./assets/styles/*"
   }
 }

@@ -7,16 +7,13 @@ const actions = GP_PLAYER_ACTIONS;
 
 const mapStateToProps = state => {
   return state.player;
-}
+};
 
 const mapDispatchToProps = dispatch => {
-  
   return {
-    onVolumeInput: event => {
-      dispatch({ type: actions.VOLUME_CHANGE, payload: +event.target.value })
-    }
-  }
-}
+    onVolumeInput: value => dispatch({ type: actions.VOLUME_CHANGE, payload: value })
+  };
+};
 
 export const PlayerPageContainer = connect(
   mapStateToProps,

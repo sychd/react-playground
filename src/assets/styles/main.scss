@@ -37,7 +37,7 @@ button {
     font-weight: $font-bold;
     text-transform: uppercase;
     border: none;
-    transition: transform 0.2s ease-out;
+    transition: transform 50ms ease-out;
 
     &:hover {
         background-color: $dark-gray;
