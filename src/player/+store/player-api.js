@@ -6,7 +6,6 @@ export const PlayerApi = {
             .catch(fetchErrorHandler);
     },
     setVolume: () => {
-        return Promise.reject();
         return fetch(`${CONFIG.API_URL}/public-api/users?access-token=ZtPlFc_BKfkI-6QxxYOc7nGhOuh38s0n93Ym`, {mode: 'cors'})
             .catch(fetchErrorHandler);
     },
