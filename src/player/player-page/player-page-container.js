@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      onVolumeChange: value => dispatch({ type: actions.SET_VOLUME, payload: value }),
+      onVolumeChange: value => dispatch({ type: actions.REQUEST_VOLUME_CHANGE, payload: value }),
       onPreviousClick: () => dispatch({ type: actions.TRIGGER_PREVIOUS }),
       onNextClick: () => dispatch({ type: actions.TRIGGER_NEXT }),
       onPlayPauseClick: () => dispatch({ type: actions.SWITCH_PLAY_STATE }),

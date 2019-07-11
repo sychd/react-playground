@@ -2,8 +2,12 @@ import React, {useState} from "react";
 import "./range.scss";
 
 export function Range(props) {
-    const [value, setValue] = useState(props.value || 0);
     const [isCtrlPressed, setIsCtrlPressed] = useState(false);
+    const [value, setValue] = useState(props.value);
+
+    if (props.value !== value && !isCtrlPressed) {
+         setValue(props.value);
+    }
 
     const setPressedOnVolumeCtrl = isCtrlPressed => (event) => {
         setIsCtrlPressed(isCtrlPressed);
